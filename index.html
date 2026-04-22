@@ -52,7 +52,7 @@
 
   /* -------- Hero -------- */
   .hero{position:relative;min-height:620px;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden;border:none}
-  .hero-bg{position:absolute;inset:0;background:url('visuels/le%20batiment%20nuit.png') center/cover no-repeat;filter:brightness(.45) saturate(1.1)}
+  .hero-bg{position:absolute;inset:0;background:url('visuels/sandy%20shores.png') center/cover no-repeat;filter:brightness(.5) saturate(1.1)}
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,14,.55) 0%,rgba(11,11,14,.92) 100%)}
   .hero-inner{position:relative;z-index:1}
   .hero h1{font-size:72px;background:linear-gradient(180deg,#ffffff 0%,var(--gold) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -161,7 +161,7 @@
       <a href="#fonctionnement">Fonctionnement</a>
       <a href="#jeux">Jeux</a>
       <a href="#progression">Progression</a>
-      <a href="#hippique">Hippique</a>
+      <a href="#emplacement">Emplacement</a>
       <a href="#competences">Compétences</a>
     </nav>
   </div>
@@ -192,13 +192,26 @@
       <div class="pillar"><span class="n">04</span><div class="t">Supervisé</div><p class="d">Tous les logs (jetons, mises, gains, retraits, sessions) transmis au staff serveur pour supervision économique.</p></div>
     </div>
 
-    <div class="img-hero-split">
-      <figure>
-        <img src="visuels/le%20batiment.png" alt="">
-      </figure>
-      <figure>
-        <img src="visuels/le%20batiment%20nuit.png" alt="">
-      </figure>
+  </div>
+</section>
+
+<!-- ========== EMPLACEMENT ========== -->
+<section id="emplacement">
+  <div class="wrap">
+    <h4>Emplacement</h4>
+    <h2>Sandy Shores</h2>
+    <div class="divider"></div>
+
+    <p class="lead">Implantation envisagée à <strong>Sandy Shores</strong>. L'objectif est de <strong>créer de l'attractivité dans la zone</strong>, en y installant un pôle RP premium qui attire et fait circuler les joueurs.</p>
+
+    <figure style="margin-top:28px">
+      <img src="visuels/sandy%20shores.png" alt="">
+    </figure>
+
+    <div class="grid grid-3" style="margin-top:28px">
+      <div class="card"><h3>Attractivité zone</h3><p>Le Diamond devient un point d'ancrage RP dans un secteur aujourd'hui peu fréquenté.</p></div>
+      <div class="card"><h3>Flux de joueurs</h3><p>Génère de la circulation sur les routes et activités autour de Sandy Shores.</p></div>
+      <div class="card"><h3>Identité forte</h3><p>Contraste visuel et narratif : établissement premium dans un cadre décalé, lecture RP riche.</p></div>
     </div>
   </div>
 </section>
@@ -473,49 +486,10 @@
   </div>
 </section>
 
-<!-- ========== COURSE HIPPIQUE ========== -->
-<section id="hippique">
-  <div class="wrap">
-    <h4>IX. Extension — Course hippique</h4>
-    <h2>Volet hippique adossé au casino</h2>
-    <div class="divider"></div>
-
-    <div class="callout warn">
-      <h4>Section extension — à valider séparément</h4>
-      <p>Ce volet n'apparaît pas dans les documents sources initiaux. Il est proposé comme <strong>extension</strong> du projet et à trancher séparément avec les staffs.</p>
-    </div>
-
-    <div class="two-col">
-      <div>
-        <p>Une <strong>piste de courses hippiques</strong> est adjacente à l'établissement. Elle ouvre un second pôle RP complémentaire au casino : paris sportifs, écuries RP, événements hippiques et scénarios croisés.</p>
-
-        <h3>Axes proposés</h3>
-        <ul>
-          <li><strong>Paris sur courses</strong> via bornes Inside Track / Main Event / Single Event déjà présentes dans l'espace casino</li>
-          <li><strong>Écuries RP</strong> — structures joueur/faction pour l'élevage et l'entraînement</li>
-          <li><strong>Grand Prix hebdomadaire</strong> — course phare avec cagnotte, retransmise dans le casino</li>
-          <li><strong>Cross-sell</strong> avec Le Diamond : jetons utilisables sur les paris, PC cumulables</li>
-          <li><strong>Hospitalité VIP</strong> — tribune et paris privés pour paliers VIP/Élite</li>
-        </ul>
-      </div>
-      <div>
-        <figure>
-          <img src="visuels/course%20hippique.png" alt="">
-        </figure>
-      </div>
-    </div>
-
-    <div class="callout">
-      <h4>À préciser avec les staffs</h4>
-      <p>Concept cible (simple annexe ou véritable pôle), propriété de la piste, intégration économique avec le casino, règlement des paris, politique de gains.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ========== GAME DESIGN ========== -->
 <section>
   <div class="wrap">
-    <h4>X. Analyse game design</h4>
+    <h4>IX. Analyse game design</h4>
     <h2>Améliorations &amp; équilibrages proposés</h2>
     <div class="divider"></div>
     <p class="lead">Les propositions ci-dessous sont des recommandations <strong>consultant</strong>, clairement distinctes du contenu source. À trancher avec le staff.</p>
@@ -541,7 +515,6 @@
     <div class="grid grid-3">
       <div class="card"><h3>Soirée d'ouverture</h3><p>Inauguration cadrée (dress code, tapis rouge, presse RP).</p></div>
       <div class="card"><h3>Nuit VIP mensuelle</h3><p>Accès sur invitation, tables 100k activées.</p></div>
-      <div class="card"><h3>Grand Prix hippique</h3><p>Course phare hebdo, retransmission live dans le casino.</p></div>
       <div class="card"><h3>Soirée caritative</h3><p>Pot commun redistribué à une asso RP (money sink ponctuel).</p></div>
       <div class="card"><h3>Enquête RP</h3><p>Alerte logs staff → enquête conjointe police RP.</p></div>
       <div class="card"><h3>Braquage scénarisé</h3><p>Événement staff, cooldown long, transport blindé.</p></div>
@@ -552,7 +525,7 @@
 <!-- ========== COMPETENCES ========== -->
 <section id="competences">
   <div class="wrap">
-    <h4>XI. Compétences requises</h4>
+    <h4>X. Compétences requises</h4>
     <h2>Ce que le projet demande</h2>
     <div class="divider"></div>
 
@@ -618,7 +591,7 @@
 <!-- ========== POINTS A TRANCHER ========== -->
 <section>
   <div class="wrap">
-    <h4>XII. Décisions à prendre</h4>
+    <h4>XI. Décisions à prendre</h4>
     <h2>Points à trancher avec les staffs</h2>
     <div class="divider"></div>
 
@@ -629,9 +602,8 @@
       <div class="card"><h3>04 — Seuil gros retraits</h3><p>Définir seuil de validation manuelle et délai.</p></div>
       <div class="card"><h3>05 — Anti-collusion</h3><p>Formuler la politique et les sanctions.</p></div>
       <div class="card"><h3>06 — Organigramme</h3><p>Valider les rôles proposés et leurs effectifs.</p></div>
-      <div class="card"><h3>07 — Volet hippique</h3><p>Intégration complète, simple annexe, ou report ?</p></div>
-      <div class="card"><h3>08 — Intégration tech</h3><p>Équipe dev Flash FA disponible, calendrier.</p></div>
-      <div class="card"><h3>09 — Identité visuelle</h3><p>Charte, logo, signalétique in-game.</p></div>
+      <div class="card"><h3>07 — Intégration tech</h3><p>Équipe dev Flash FA disponible, calendrier.</p></div>
+      <div class="card"><h3>08 — Identité visuelle</h3><p>Charte, logo, signalétique in-game.</p></div>
     </div>
   </div>
 </section>
@@ -649,7 +621,6 @@
       <span class="tag">Progression 5 paliers</span>
       <span class="tag">Supervision staff totale</span>
       <span class="tag">Hub social</span>
-      <span class="tag">Extension hippique</span>
     </div>
   </div>
 </section>
