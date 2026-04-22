@@ -204,10 +204,6 @@
   .hero-inner > .signature{animation-delay:.6s}
   .hero-inner > .ornament{animation-delay:.85s}
 
-  /* Scroll reveal (piloté par JS) */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
-  .reveal.in-view{opacity:1;transform:translateY(0)}
-
   /* Hover luxe sur cartes */
   .card,.pillar,.tier{transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .25s,box-shadow .35s,background .25s}
   .card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 18px 45px rgba(212,175,55,.18),0 4px 12px rgba(0,0,0,.3)}
@@ -358,7 +354,6 @@
       transition-duration:.01ms !important;
     }
     .hero-inner > *{opacity:1 !important}
-    .reveal{opacity:1 !important;transform:none !important}
     .sparkle{display:none}
   }
 
@@ -879,25 +874,6 @@
 </footer>
 
 <script>
-  // Scroll reveal on sections and cards
-  (function(){
-    var items = document.querySelectorAll('section, .card, .pillar, .tier, figure, .callout');
-    items.forEach(function(el){ el.classList.add('reveal'); });
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if (e.isIntersecting) {
-            e.target.classList.add('in-view');
-            io.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-      items.forEach(function(el){ io.observe(el); });
-    } else {
-      items.forEach(function(el){ el.classList.add('in-view'); });
-    }
-  })();
-
   // Mobile menu toggle
   (function(){
     var btn = document.querySelector('.nav-toggle');
