@@ -503,9 +503,8 @@
         <h3>Flux d'argent</h3>
         <ul>
           <li><strong>Conversion obligatoire</strong> argent → jetons pour jouer</li>
-          <li><strong>2 000 $ / jour max</strong> en espèces par joueur</li>
-          <li>Au-delà : transactions bancaires uniquement</li>
           <li>Tous les mouvements sont <strong>traçables</strong></li>
+          <li>Retraits encadrés via banque uniquement</li>
         </ul>
 
         <h3>Objectifs opérationnels</h3>
@@ -521,6 +520,28 @@
         </figure>
       </div>
     </div>
+
+    <h3 style="margin-top:32px">Deux types de jetons</h3>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Jeton Hasardeux</h3>
+        <p style="color:var(--muted);font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">Converti depuis les espèces</p>
+        <ul>
+          <li>Plafond <strong>2 000 $ / jour</strong> par joueur (limite espèces)</li>
+          <li>Utilisable sur les <strong>tables limitées à 2 000 $</strong></li>
+          <li>Entrée accessible, premier contact casino</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Jeton Normal (de banque)</h3>
+        <p style="color:var(--muted);font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">Converti via transaction bancaire</p>
+        <ul>
+          <li><strong>Pas de plafond journalier</strong></li>
+          <li>Utilisable sur l'ensemble des tables</li>
+          <li>Traçabilité bancaire complète</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -528,40 +549,92 @@
 <section id="jeux">
   <div class="wrap">
     <h4>IV. Structure des jeux</h4>
-    <h2>Poker, Blackjack, Machines à sous</h2>
+    <h2>Jeux &amp; configurations actuelles</h2>
     <div class="divider"></div>
 
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>Poker</h3>
-        <table>
-          <tr><th>Niveau</th><th>Mises</th></tr>
-          <tr><td>Public</td><td>500 / 1 000 / 2 000 $</td></tr>
-          <tr><td>Intermédiaire</td><td>5 000 / 10 000 $</td></tr>
-          <tr><td>Haut de gamme</td><td>20 000 / 50 000 $</td></tr>
-          <tr><td>VIP</td><td>jusqu'à 100 000 $</td></tr>
-        </table>
-        <p style="font-size:13px;color:var(--muted)">Accès VIP restreint aux paliers supérieurs.</p>
+    <p class="lead">Chaque machine ou table est <strong>pilotée individuellement par le staff casino</strong> via l'interface admin du serveur : mises min/max, multiplicateurs, probabilités et type de jeton accepté sont tous modifiables. Les chiffres ci-dessous sont la <strong>configuration actuelle</strong>.</p>
+
+    <h3 style="margin-top:32px">1. Table de mise simple</h3>
+    <div class="card">
+      <table>
+        <tr><th>Paramètre</th><th>Valeur</th></tr>
+        <tr><td>Jeton accepté</td><td>Jeton Hasardeux</td></tr>
+        <tr><td>Mise min / max</td><td>0 → 10 000 jetons</td></tr>
+        <tr><td>Multiplicateur gagnant</td><td><strong>x2</strong></td></tr>
+      </table>
+      <p style="font-size:14px;color:#c5c5d1;margin-top:10px">Jeu rapide et lisible (type pile/face). Parfait pour l'accessibilité des joueurs occasionnels.</p>
+    </div>
+
+    <h3>2. Table « à valeurs » (type main de cartes)</h3>
+    <div class="card">
+      <table>
+        <tr><th>Paramètre</th><th>Valeur</th></tr>
+        <tr><td>Jeton accepté</td><td>Jeton Hasardeux</td></tr>
+        <tr><td>Mise min / max</td><td>0 → 10 000 jetons</td></tr>
+      </table>
+
+      <div class="grid grid-2" style="margin-top:18px">
+        <div>
+          <h3 style="margin-top:0">Paiements « ante »</h3>
+          <table>
+            <tr><th>Main de valeur</th><th>Multiplicateur</th></tr>
+            <tr><td>500</td><td><strong>x5</strong></td></tr>
+            <tr><td>400</td><td>x4</td></tr>
+            <tr><td>300</td><td>x1</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3 style="margin-top:0">Paiements « pairPlus »</h3>
+          <table>
+            <tr><th>Main de valeur</th><th>Multiplicateur</th></tr>
+            <tr><td>500</td><td><strong>x40</strong></td></tr>
+            <tr><td>400</td><td>x30</td></tr>
+            <tr><td>300</td><td>x6</td></tr>
+            <tr><td>200</td><td>x4</td></tr>
+            <tr><td>100</td><td>x1</td></tr>
+          </table>
+        </div>
       </div>
-      <div class="card">
-        <h3>Blackjack</h3>
-        <table>
-          <tr><th>Niveau</th><th>Mises</th></tr>
-          <tr><td>Public</td><td>50 → 1 000 $</td></tr>
-          <tr><td>Intermédiaire</td><td>500 → 5 000 $</td></tr>
-          <tr><td>Haut de gamme</td><td>1 000 → 10 000 $</td></tr>
-        </table>
-        <p style="font-size:13px;color:var(--muted)">Règles standards, RTP à caler avec les staffs.</p>
-      </div>
-      <div class="card">
-        <h3>Machines à sous</h3>
-        <table>
-          <tr><th>Niveau</th><th>Mises</th></tr>
-          <tr><td>Basique</td><td>5 → 50 $</td></tr>
-          <tr><td>Standard</td><td>50 → 200 $</td></tr>
-          <tr><td>Premium</td><td>200 → 500 $</td></tr>
-        </table>
-        <p style="font-size:13px;color:var(--muted)">Jackpots pilotés en interne.</p>
+      <p style="font-size:14px;color:#c5c5d1;margin-top:14px">Deux pools de paiement indépendants (ante + pairPlus), ce qui offre une profondeur stratégique et des gains potentiels élevés (main 500 sur pairPlus = <strong>x40 la mise</strong>).</p>
+    </div>
+
+    <h3>3. Machine à sous</h3>
+    <div class="card">
+      <table>
+        <tr><th>Paramètre</th><th>Valeur</th></tr>
+        <tr><td>Jeton accepté</td><td>Jeton Hasardeux</td></tr>
+        <tr><td>Mise par spin</td><td>10 jetons</td></tr>
+      </table>
+
+      <div class="grid grid-2" style="margin-top:18px">
+        <div>
+          <h3 style="margin-top:0">Probabilités des symboles</h3>
+          <table>
+            <tr><th>Symbole</th><th>Chance</th></tr>
+            <tr><td>Sept (7)</td><td>12.5 %</td></tr>
+            <tr><td>Diamant (D)</td><td>10 %</td></tr>
+            <tr><td>Cerise (C)</td><td>18.75 %</td></tr>
+            <tr><td>Étoile (*)</td><td>6.25 %</td></tr>
+            <tr><td>Pastèque (P)</td><td>12.5 %</td></tr>
+            <tr><td>Cloche (X)</td><td>12.5 %</td></tr>
+            <tr><td>Grape (G)</td><td>18.75 %</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3 style="margin-top:0">Multiplicateurs de gain</h3>
+          <table>
+            <tr><th>Combinaison</th><th>Gain</th></tr>
+            <tr><td>1 Diamant</td><td>x2</td></tr>
+            <tr><td>2 Diamants</td><td>x5</td></tr>
+            <tr><td>3 Diamants</td><td>x30</td></tr>
+            <tr><td>3 Cerises</td><td>x3</td></tr>
+            <tr><td>3 Pastèques</td><td>x10</td></tr>
+            <tr><td>3 Cloches</td><td>x12</td></tr>
+            <tr><td>3 Grapes</td><td>x8</td></tr>
+            <tr><td>3 Sept</td><td>x25</td></tr>
+            <tr><td><strong>3 Étoiles</strong> (jackpot)</td><td><strong>x50</strong></td></tr>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -570,8 +643,8 @@
     </figure>
 
     <div class="callout">
-      <h4>Contrôle casino</h4>
-      <p>Le casino conserve le contrôle total sur le <strong>taux de redistribution (RTP)</strong>, les <strong>jackpots</strong> et l'<strong>équilibrage</strong> de toutes les machines et tables.</p>
+      <h4>Pilotage staff casino</h4>
+      <p>Le casino conserve le contrôle total via l'interface admin sur : <strong>mises min/max</strong>, <strong>multiplicateurs</strong>, <strong>probabilités de symboles</strong>, <strong>type de jeton accepté</strong>, activation/désactivation de chaque prop. Les ajustements sont possibles à tout moment selon l'état de la banque et les retours joueurs.</p>
     </div>
   </div>
 </section>
@@ -733,17 +806,23 @@
 
     <p class="lead">Capital de départ estimé : <strong>~900 000 $</strong>. Public potentiel au start : <strong>200 à 300 joueurs</strong> sur les ~1 000 du serveur. Ce capital est suffisant pour ouvrir, <strong>mais pas pour tout ouvrir d'un coup</strong> — une ouverture progressive est indispensable pour absorber la variance des premières semaines.</p>
 
-    <h3 style="margin-top:32px">Analyse du risque par jeu</h3>
+    <h3 style="margin-top:32px">Analyse du risque par jeu (config actuelle)</h3>
     <table>
-      <tr><th>Jeu</th><th>Risque casino</th><th>Justification</th></tr>
-      <tr><td>Poker</td><td>Faible</td><td>PvP — le casino ne paie que le rake (commission sur les pots)</td></tr>
-      <tr><td>Machines à sous</td><td>Modéré</td><td>RTP contrôlé (88-92 %), le casino gagne sur le volume</td></tr>
-      <tr><td>Blackjack</td><td><strong>Élevé court terme</strong></td><td>Variance forte — un joueur chanceux peut enchaîner 5-10 mains et sortir avec 50-100 k$ en 15 min</td></tr>
+      <tr><th>Jeu</th><th>Mise max</th><th>Paiement max</th><th>Risque casino</th></tr>
+      <tr><td>Table simple (x2)</td><td>10 000</td><td>20 000</td><td>Faible</td></tr>
+      <tr><td>Machine à sous</td><td>10 / spin</td><td>500</td><td>Très faible (volume lent)</td></tr>
+      <tr><td>Table à valeurs — ante</td><td>10 000</td><td>50 000</td><td>Modéré</td></tr>
+      <tr><td><strong>Table à valeurs — pairPlus</strong></td><td><strong>10 000</strong></td><td><strong>400 000</strong></td><td><strong>Élevé court terme</strong></td></tr>
     </table>
+
+    <div class="callout warn">
+      <h4>Risque concentré identifié</h4>
+      <p>Le <strong>pairPlus (x40)</strong> sur une mise maximale de 10 000 peut sortir <strong>400 000 jetons d'un seul coup</strong>. Avec 900 000 $ de banque, une seule main gagnante à valeur 500 vide <strong>près de 45 % de la trésorerie</strong>. La probabilité d'une main 500 est faible mais non-nulle : une soirée malchanceuse reste possible.</p>
+    </div>
 
     <div class="callout info">
       <h4>Règle empirique casino</h4>
-      <p>La banque doit pouvoir couvrir <strong>50 à 100 × la mise maximale</strong> de chaque table ouverte pour absorber la variance. Une table Blackjack 10 000 $ demande à elle seule <strong>500 k$ à 1 M$</strong> de bankroll dédié.</p>
+      <p>La banque doit pouvoir couvrir <strong>50 à 100 × le paiement maximum</strong> de chaque table ouverte. Pour le pairPlus à 400 000 jetons par main max, il faudrait théoriquement <strong>20 à 40 M$</strong> — ce qui n'est pas réaliste au start. La solution : <strong>abaisser la mise max ou le multiplicateur x40 en phase 1</strong>.</p>
     </div>
 
     <h3>Ce que 900 000 $ couvre (ou non)</h3>
@@ -751,20 +830,20 @@
       <div class="card">
         <h3 style="color:var(--gold-2)">Couvre confortablement</h3>
         <ul>
-          <li>Tables publiques (mises 50 → 2 000 $)</li>
-          <li>Tables intermédiaires (mises 500 → 10 000 $)</li>
-          <li>Machines à sous basique + standard</li>
+          <li>Table simple x2 (mise 0 → 10 000)</li>
+          <li>Machine à sous telle quelle (mise fixe 10 jetons)</li>
+          <li>Table à valeurs ante (multi max x5)</li>
           <li>Salaires RP de l'équipe (13-23 postes) sur 2 à 4 semaines</li>
           <li>Fonds de caisse courante + conversions jetons</li>
         </ul>
       </div>
       <div class="card">
-        <h3 style="color:var(--danger)">Ne couvre pas sans risque</h3>
+        <h3 style="color:var(--danger)">Ne couvre pas sans aménagement</h3>
         <ul>
-          <li>Tables haut de gamme &amp; VIP dès le start</li>
+          <li><strong>pairPlus x40 à pleine mise 10 000</strong> (paiement potentiel 400 000)</li>
+          <li>Plusieurs pairPlus gagnants en rafale la même soirée</li>
           <li>Jackpots progressifs ambitieux</li>
-          <li>Une session malchanceuse sur blackjack 10 000 $</li>
-          <li>Un gros gagnant isolé la 1<sup>ère</sup> semaine</li>
+          <li>Ajout de tables haut de gamme supplémentaires</li>
         </ul>
       </div>
     </div>
@@ -776,24 +855,24 @@
         <h3>Phase 1 — Soft launch</h3>
         <p style="color:var(--muted);font-size:13px;letter-spacing:1px;text-transform:uppercase">Semaines 1 à 4</p>
         <ul>
-          <li>Tables <strong>publiques + intermédiaires</strong> uniquement</li>
-          <li>Machines basique + standard</li>
-          <li>Haut de gamme / VIP : « en préparation »</li>
+          <li>Table simple <strong>x2</strong> : mise max <strong>5 000</strong> (au lieu de 10 000)</li>
+          <li>Machine à sous : config actuelle conservée</li>
+          <li>Table à valeurs : <strong>ante uniquement</strong>, pairPlus désactivé OU mise max ramenée à <strong>2 000</strong></li>
           <li>Plafond retrait : <strong>50 000 $ / jour / joueur</strong></li>
           <li>Aucun jackpot progressif annoncé</li>
         </ul>
-        <p style="font-size:14px;color:#c5c5d1;margin-top:10px">Avec 200-300 joueurs potentiels, cela remplit largement les tables disponibles et permet d'encaisser de la marge sans risque de ruine.</p>
+        <p style="font-size:14px;color:#c5c5d1;margin-top:10px">Avec 200-300 joueurs, les jeux restent attractifs et la banque est protégée contre les gros coups isolés.</p>
       </div>
       <div class="card">
         <span class="card-num">02</span>
         <h3>Phase 2 — Montée en gamme</h3>
         <p style="color:var(--muted);font-size:13px;letter-spacing:1px;text-transform:uppercase">Dès que la banque ≥ 2 M$</p>
         <ul>
-          <li>Ouverture tables haut de gamme</li>
-          <li>Activation machines <strong>premium</strong></li>
-          <li>Plafond retrait relevé à <strong>100 000 $ / jour</strong></li>
-          <li>Premiers jackpots plafonnés</li>
+          <li>Table simple : mise max remontée à <strong>10 000</strong></li>
+          <li>pairPlus <strong>réactivé</strong> à mise max 5 000</li>
+          <li>Plafond retrait relevé : <strong>100 000 $ / jour</strong></li>
           <li>Premiers tournois réguliers</li>
+          <li>Ajout possible de nouveaux props configurables</li>
         </ul>
       </div>
       <div class="card">
@@ -801,10 +880,11 @@
         <h3>Phase 3 — VIP / Élite</h3>
         <p style="color:var(--muted);font-size:13px;letter-spacing:1px;text-transform:uppercase">À partir de 5 M$ de bankroll</p>
         <ul>
-          <li>Tables privées <strong>100 000 $</strong> (accès Élite)</li>
-          <li>Jackpots progressifs complets</li>
+          <li><strong>pairPlus à pleine mise 10 000</strong> (paiement max 400 000 assumé)</li>
+          <li>Jackpots progressifs activés</li>
           <li>Hospitalité VIP / Élite</li>
           <li>Événements premium mensuels</li>
+          <li>Tables privées sur invitation</li>
         </ul>
       </div>
     </div>
@@ -827,7 +907,7 @@
 
     <div class="callout">
       <h4>Verdict</h4>
-      <p><strong>900 000 $ suffit pour ouvrir, mais pas pour tout ouvrir.</strong> Le soft launch (tables publiques + intermédiaires) permet d'encaisser de la marge sans risque structurel. La montée en gamme se fait au rythme de la banque. Le vrai risque à éviter : <em>ouvrir la table Blackjack 10 000 $ dès le jour 1 et tomber sur un joueur chanceux — 200 000 $ peuvent partir en une seule soirée.</em></p>
+      <p><strong>900 000 $ suffit pour ouvrir, à condition d'abaisser le pairPlus x40 à pleine mise en phase 1.</strong> Le soft launch avec mise max 5 000 sur la table simple et pairPlus désactivé/plafonné élimine le risque de main à 400 000 jetons qui viderait 45 % de la banque. La montée en gamme se fait au rythme de la banque, via l'interface admin qui permet de modifier tous les paramètres sans redémarrage.</p>
     </div>
   </div>
 </section>
